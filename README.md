@@ -1,8 +1,13 @@
-# React + Vite
+# Test task
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## The task - develop the interface of a two-page application in React
 
-Currently, two official plugins are available:
+Technology Stack:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- JS
+- HTML
+- CSS or preprocessors
+- React
+- Redux
+- Redux Toolkit
+- React Router v6
