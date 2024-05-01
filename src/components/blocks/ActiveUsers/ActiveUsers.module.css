@@ -1,0 +1,7 @@
+.users {
+  display: flex;
+  gap: 32px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+}
