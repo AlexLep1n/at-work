@@ -15,6 +15,39 @@
 }
 
 .user__content {
-  height: 100%;
+  height: 120px;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: relative;
+}
+
+.user__name {
+  color: #22a0bc;
+  font-weight: 600;
+  font-size: 20px;
+  margin-bottom: 4px;
+}
+
+.user__company {
+  color: #595959;
+  font-weight: 500;
+  font-size: 16px;
+  margin-bottom: 50px;
+}
+
+.user__city {
+  color: #9c9c9c;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.user__btn {
+  border: none;
+  background-color: #fff;
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  cursor: pointer;
 }

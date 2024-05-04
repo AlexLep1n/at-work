@@ -26,7 +26,7 @@ export default function ActiveUsers() {
             key={user.id}
             userName={user.username}
             companyName={user.company.name}
-            city={user.address.cyty}
+            city={user.address.city}
           />
         ))}
       {error && (

@@ -6,13 +6,10 @@ export default function User({ userName, companyName, city, onClick }) {
     <div className={classes.user}>
       <img className={classes.user__img} src="./img/user-img.png" alt="user" />
       <div className={classes.user__content}>
-        <h4>{userName}</h4>
-        <p>{companyName}</p>
-        <p>{city}</p>
-        <button
-          onClick={onClick}
-          style={{ border: "none", backgroundColor: "#fff" }}
-        >
+        <h4 className={classes.user__name}>{userName}</h4>
+        <p className={classes.user__company}>{companyName}</p>
+        <p className={classes.user__city}>{city}</p>
+        <button onClick={onClick} className={classes.user__btn}>
           <svg
             width="4"
             height="17"

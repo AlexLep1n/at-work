@@ -1,6 +1,6 @@
 .users {
   display: flex;
-  gap: 32px;
+  gap: 40px;
   flex-wrap: wrap;
   justify-content: flex-start;
   align-items: center;
