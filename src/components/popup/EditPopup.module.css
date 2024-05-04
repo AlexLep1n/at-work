@@ -1,0 +1,30 @@
+.popup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 8px;
+  width: 200px;
+  border-radius: 12px;
+  background-color: #fdfdfd;
+  position: absolute;
+  z-index: 2;
+  top: 50px;
+  right: 36px;
+  box-shadow: 0 0 2px 0 #5a5a5a;
+}
+
+.variant {
+  color: #161616;
+  font-weight: 500;
+  font-size: 16px;
+  padding: 8px 12px;
+  border: none;
+  background-color: #fdfdfd;
+  cursor: pointer;
+}
+
+.variant:hover {
+  color: #22a0bc;
+}

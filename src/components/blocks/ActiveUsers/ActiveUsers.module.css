@@ -1,3 +1,18 @@
+.title {
+  color: #161616;
+  font-weight: 600;
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+
+.hr {
+  border: none;
+  color: #dadada;
+  background-color: #dadada;
+  height: 1px;
+  margin-bottom: 28px;
+}
+
 .users {
   display: flex;
   gap: 40px;

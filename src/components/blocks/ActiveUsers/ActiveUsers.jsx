@@ -18,23 +18,27 @@ export default function ActiveUsers() {
   }
 
   return (
-    <section className={classes.users}>
-      {status === "loading" && <h3>Loading...</h3>}
-      {status === "success" &&
-        entities.map((user) => (
-          <User
-            key={user.id}
-            userName={user.username}
-            companyName={user.company.name}
-            city={user.address.city}
-          />
-        ))}
-      {error && (
-        <div>
-          <p>{error}</p>
-          <button onClick={clickHandler}>Retry</button>
-        </div>
-      )}
+    <section>
+      <h3 className={classes.title}>Активные</h3>
+      <hr className={classes.hr} />
+      <div className={classes.users}>
+        {status === "loading" && <h3>Loading...</h3>}
+        {status === "success" &&
+          entities.map((user) => (
+            <User
+              key={user.id}
+              userName={user.username}
+              companyName={user.company.name}
+              city={user.address.city}
+            />
+          ))}
+        {error && (
+          <div>
+            <p>{error}</p>
+            <button onClick={clickHandler}>Retry</button>
+          </div>
+        )}
+      </div>
     </section>
   );
 }

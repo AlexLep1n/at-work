@@ -1,7 +1,11 @@
 /* eslint-disable react/prop-types */
+import { useState } from "react";
+import EditPopup from "../../popup/EditPopup.jsx";
 import classes from "./User.module.css";
 
-export default function User({ userName, companyName, city, onClick }) {
+export default function User({ userName, companyName, city }) {
+  const [activeModal, setActiveModal] = useState(false);
+
   return (
     <div className={classes.user}>
       <img className={classes.user__img} src="./img/user-img.png" alt="user" />
@@ -9,7 +13,10 @@ export default function User({ userName, companyName, city, onClick }) {
         <h4 className={classes.user__name}>{userName}</h4>
         <p className={classes.user__company}>{companyName}</p>
         <p className={classes.user__city}>{city}</p>
-        <button onClick={onClick} className={classes.user__btn}>
+        <button
+          onClick={() => setActiveModal((prev) => !prev)}
+          className={classes.user__btn}
+        >
           <svg
             width="4"
             height="17"
@@ -24,6 +31,7 @@ export default function User({ userName, companyName, city, onClick }) {
           </svg>
         </button>
       </div>
+      {activeModal && <EditPopup />}
     </div>
   );
 }
