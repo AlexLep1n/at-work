@@ -18,19 +18,14 @@ export default function ActiveUsers() {
   }
 
   return (
-    <section>
+    <section className={classes["active-users"]}>
       <h3 className={classes.title}>Активные</h3>
       <hr className={classes.hr} />
       <div className={classes.users}>
         {status === "loading" && <h3>Loading...</h3>}
         {status === "success" &&
           entities.map((user) => (
-            <User
-              key={user.id}
-              userName={user.username}
-              companyName={user.company.name}
-              city={user.address.city}
-            />
+            <User key={user.id} user={user} active={true} />
           ))}
         {error && (
           <div>

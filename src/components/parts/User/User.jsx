@@ -1,18 +1,21 @@
 /* eslint-disable react/prop-types */
 import { useState } from "react";
-import EditPopup from "../../popup/EditPopup.jsx";
+import Popup from "../../popup/Popup.jsx";
 import classes from "./User.module.css";
+import { useDispatch } from "react-redux";
+import { archiveUser, hideUser } from "../../../state/reducers/usersSlice.js";
 
-export default function User({ userName, companyName, city }) {
+export default function User({ user, active, archive }) {
   const [activeModal, setActiveModal] = useState(false);
+  const dispatch = useDispatch();
 
   return (
     <div className={classes.user}>
       <img className={classes.user__img} src="./img/user-img.png" alt="user" />
       <div className={classes.user__content}>
-        <h4 className={classes.user__name}>{userName}</h4>
-        <p className={classes.user__company}>{companyName}</p>
-        <p className={classes.user__city}>{city}</p>
+        <h4 className={classes.user__name}>{user.username}</h4>
+        <p className={classes.user__company}>{user.company.name}</p>
+        <p className={classes.user__city}>{user.address.city}</p>
         <button
           onClick={() => setActiveModal((prev) => !prev)}
           className={classes.user__btn}
@@ -31,7 +34,14 @@ export default function User({ userName, companyName, city }) {
           </svg>
         </button>
       </div>
-      {activeModal && <EditPopup />}
+      {activeModal && (
+        <Popup
+          active={active}
+          archive={archive}
+          archiveUser={() => dispatch(archiveUser(user))}
+          hideUser={() => dispatch(hideUser(user))}
+        />
+      )}
     </div>
   );
 }
